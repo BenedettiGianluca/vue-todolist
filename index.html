@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue To Do List</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="Vue">
+        <div>
+            <input type="text" class="scriviCompito" v-on:keyup.enter="aggiungiCompito">
+            <button type="button" class="bottoneAggiungiCompito" @click="aggiungiCompito">Aggiungi</button>
+        </div>
+        <div class="listaCompiti">
+            <li v-for="(elemento, index) in toDoList"><span style="text-decoration: line-through;" v-if="elemento.done == true" @click="trueFalse">{{elemento.text}}</span><span style="text-decoration: none;" v-if="elemento.done == false" @click="trueFalse">{{elemento.text}}</span><i class="fas fa-times" @click="rimuoviCompito"></i></li>
+        </div>
+    </main>
+    <script src="myscript.js"></script>
+</body>
+</html>

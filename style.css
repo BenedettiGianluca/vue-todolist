@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+div {
+    display: flex;
+    margin-top: 70px;
+}
+
+.scriviCompito {
+    width: 45%;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin-left: 20%;
+}
+
+.bottoneAggiungiCompito {
+    width: 10%;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    margin-left: 5%;
+}
+
+.listaCompiti {
+    flex-direction: column;
+    background-color: lightgray;
+    width: 60%;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin-left: 20%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    margin: 10px;
+}
+
+.scriviCompito:hover, .bottoneAggiungiCompito:hover, li>span {
+    cursor: pointer;
+}
+
+.fa-times:hover {
+    cursor: pointer;
+    color: red;
+}
